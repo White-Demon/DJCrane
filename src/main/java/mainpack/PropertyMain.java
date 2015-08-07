@@ -15,16 +15,19 @@ import java.util.Properties;
 public class PropertyMain {
 
     Logger logger = LoggerFactory.getLogger(Main.class);
-
+    
+    private FileInputStream fis;
+    private Properties property;
+    
     public int FIELD_WIDTH;
     public int FIELD_HEIGHT;
     public int STARTX;
     public int STARTY;
     public int SCALE;
 
-    PropertyMain (){
-        FileInputStream fis;
-        Properties property = new Properties();
+    public PropertyMain (){
+        
+        property = new Properties();
 
         try {
             fis = new FileInputStream("src/main/resources/DJCrane.properties");
